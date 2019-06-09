@@ -2,6 +2,7 @@ package chapter2;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 //동작 파라미터화를 적용한 사과 필터
 public class AppleFilterBehavParam {
@@ -27,9 +28,6 @@ public class AppleFilterBehavParam {
         return result;
     }
 
-    public interface Predicate<T> {
-        boolean test (T t);
-    }
 
 
     public interface ApplePredicate {

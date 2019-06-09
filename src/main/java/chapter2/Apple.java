@@ -1,11 +1,18 @@
 package chapter2;
 
 public class Apple {
-    String color;
-    int weight;
+    String color = "default color";
+    int weight = 0;
 
     public Apple(String color, int weight) {
         this.color = color;
+        this.weight = weight;
+    }
+
+    public Apple() {
+    }
+
+    public Apple(int weight) {
         this.weight = weight;
     }
 
