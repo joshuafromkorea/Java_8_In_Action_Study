@@ -7,6 +7,8 @@ import org.junit.Test;
 
 import java.util.*;
 
+import static java.util.Comparator.comparing;
+import static java.util.Comparator.comparingInt;
 import static java.util.stream.Collectors.*;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
@@ -57,6 +59,28 @@ public class Grouping {
                         ))
                 );
         System.out.println(dishesByTypeCaloryLevel);
-
     }
+
+    @Test
+    public void 서브그룹_데이터_수집(){
+        Map<Dish.Type, Optional<Dish>> mostCaloricByType =
+                menu.stream().collect(groupingBy(Dish::getType,
+                        maxBy(comparingInt(Dish::getCalories))));
+        System.out.println(mostCaloricByType);
+
+        Map<Dish.Type, Dish> mostCaloricByTypeWithoutOptional =
+                menu.stream().collect(groupingBy(Dish::getType,
+                        collectingAndThen(maxBy(comparingInt(Dish::getCalories)),
+                                Optional::get)));
+        System.out.println(mostCaloricByTypeWithoutOptional);
+    }
+
+    @Test
+    public void 타입별로_칼로리총합(){
+        Map<Dish.Type, Integer> caloryByType =
+                menu.stream().collect(groupingBy(Dish::getType,
+                        summingInt(Dish::getCalories)));
+        System.out.println(caloryByType);
+    }
+
 }
