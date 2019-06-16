@@ -1,4 +1,4 @@
-package chapter4_5_6;
+package chapter4_5;
 
 import org.junit.Before;
 import org.junit.FixMethodOrder;
@@ -7,7 +7,6 @@ import org.junit.runners.MethodSorters;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;

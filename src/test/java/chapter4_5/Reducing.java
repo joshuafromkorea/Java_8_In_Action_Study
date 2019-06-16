@@ -1,4 +1,4 @@
-package chapter4_5_6;
+package chapter4_5;
 
 
 import org.junit.Before;
@@ -8,7 +8,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class Reducing {

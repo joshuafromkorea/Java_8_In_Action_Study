@@ -1,4 +1,4 @@
-package chapter4_5_6;
+package chapter4_5;
 
 public class Dish {
     private final String name;

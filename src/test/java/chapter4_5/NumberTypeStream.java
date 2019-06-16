@@ -1,4 +1,4 @@
-package chapter4_5_6;
+package chapter4_5;
 
 import org.junit.Before;
 import org.junit.Test;
